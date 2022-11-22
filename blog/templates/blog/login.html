@@ -1,0 +1,31 @@
+{#{% extends "blog/base.html" %}#}
+{#{% load crispy_forms_filters %}#}
+{#{% load crispy_forms_tags %}#}
+{% block content %}
+    <div class="content-section">
+    <div class="form_heading_user">
+        <h3>
+            LOGIN
+        </h3>
+    </div>
+        <form method="POST" >
+            {% csrf_token %}
+{#            <input type="text" placeholder="Username" name="username"> <br>#}
+{#            <input type="password" placeholder="Password" name="password"> <br>#}
+
+             <fieldset class="form-group">
+
+                {{ form }}
+            </fieldset>
+{#            <button>Forget Password?</button>#}
+            <input type="submit" value="Log In">
+        </form>
+{#    <div class="donot">#}
+{#        <h1>#}
+{#            Don’t have an account? <a href="{% url 'register' %}">Join Today</a>#}
+{#        </h1>#}
+{##}
+{#    </div>#}
+
+    </div>
+{% endblock content %}
